@@ -1,0 +1,1428 @@
+/*Fonts*/
+@font-face {
+  font-family: Molot;
+  src: url(../fonts/Molot.otf);
+}
+@font-face {
+  font-family: OhNow;
+  src: url(../fonts/OhNow.otf);
+}
+@font-face {
+  font-family: Roboto400;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto300;
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: Roboto700;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+/*General CSS*/
+img {
+	width: 100%;
+}
+/*Navbar*/
+.my_nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.my_nav nav {
+	padding: 30px 35px;
+}
+.my_nav .navbar-brand {
+	width: 225px;
+	margin-right: 55px;
+}
+.my_nav .navbar-expand-xl .navbar-nav .nav-item {
+	margin-right: 35px;
+}
+.my_nav .navbar-expand-xl .navbar-nav .nav-item:last-child {
+	margin-right: 0;
+}
+.my_nav .navbar-expand-xl .navbar-nav .nav-link {
+    color: #f4f4f4;
+    font-family: 'Roboto300';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 0 4px;
+    font-size: 90%;
+    border-bottom: 1px solid transparent;
+    transition: all .5s ease;
+}
+.my_nav .navbar-expand-xl .navbar-nav .nav-link:hover {
+	border-bottom: 1px solid #02bff7;
+}
+.my_nav .navbar-expand-xl .navbar-nav .nav-item.active .nav-link {
+	border-bottom: 1px solid #02bff7;
+}
+.my_nav .my_nav_right {
+	display: flex;
+	align-items: center;
+}
+.my_nav .my_nav_right .my_nav_profile {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    position: relative;
+}
+.my_nav .my_nav_right .my_nav_profile span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: #e9192f;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto700';
+    font-size: 80%;
+    transform-origin: 100% 0;
+    transform: scale(0.8);
+}
+.my_nav .my_nav_right .my_nav_gamers button {
+	background: transparent;
+    border: 0;
+    font-family: 'Roboto300';
+    font-size: 80%;
+    padding: 0 18px 0 0;
+	border-bottom: 1px solid #02bff7;
+    position: relative;
+    border-radius: 0;
+    letter-spacing: 2px;
+}
+.my_nav .my_nav_right .my_nav_gamers button:focus {
+	box-shadow: none;
+	background-color: inherit;
+    border-color: inherit;
+}
+.my_nav .my_nav_right .my_nav_gamers button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url(../img/select-arrow.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 10px;
+    height: 100%;
+}
+.my_nav .my_nav_right .my_nav_wallet div {
+	display: flex;
+	align-items: center;
+	margin: 0 20px 0 35px;
+	color: #fff;
+	font-size: 80%;
+}
+.my_nav .my_nav_right .my_nav_wallet div b {
+	font-family: 'Roboto700';
+}
+.my_nav .my_nav_right .my_nav_wallet div b:not(p b) {
+    margin-right: 15px;
+}
+.my_nav .my_nav_right .my_nav_wallet div p {
+	margin: 0;
+	font-family: 'Roboto300';
+	border-bottom: 1px solid #02bff7;
+}
+.my_nav .my_nav_right .my_nav_money {
+	width: 30px;
+	height: 30px;
+}
+/*Dropdown*/
+.my_nav .dropdown-menu {
+    width: 100%;
+    min-width: 100%;
+    background: #02bff7;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    border: 0;
+    padding: 0 10px;
+    display: block;
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    transition: all .5s ease;
+}
+.my_nav .dropdown-menu.show {
+	transform: scaleY(1);
+}
+.my_nav .dropdown-menu .dropdown-item {
+	color: #fff;
+    font-family: 'Roboto300';
+    font-size: 70%;
+    border-bottom: 1px solid #ffffff6b;
+    padding: 5px 0;
+    margin: 5px 0;
+}
+.my_nav .dropdown-menu .dropdown-item:hover {
+	background: transparent;
+	color: #fff;
+	opacity: .7;
+}
+.my_nav .dropdown-menu .dropdown-item:last-of-type {
+	border-bottom: 0;
+}
+/*Header*/
+.my_header {
+	background-image: url(../img/home-bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    padding: 15% 0 10%;
+    position: relative;
+}
+.my_header .container-fluid {
+	padding: 0 4% 0 7%;
+}
+.my_header .my_header_content h2 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 350%;
+    margin: 0;
+    line-height: 1;
+}
+.my_header .my_header_content h3 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 260%;
+    margin: 0;
+}
+.my_header .btn_group {
+	margin-top: 45px;
+	display: flex;
+}
+.my_header .btn_group .btn-default {
+    background: #e81830;
+    width: 155px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto400';
+    letter-spacing: 1px;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    transition: all .5s ease;
+}
+.my_header .btn_group .btn-default:hover {
+	box-shadow: 0 0 30px 0 #ffffff61;
+}
+.my_header .btn_group .btn-default.btn-inverse {
+	background: transparent;
+    border-color: #fff;
+    margin-left: 35px;
+}
+.my_header .my_header_table {
+	padding-left: 5%;
+}
+.my_header .my_header_table ul {
+	padding: 0;
+	list-style: none;
+}
+.my_header .my_header_table ul li {
+    color: #fff;
+    font-family: 'Roboto700';
+    text-transform: capitalize;
+    font-size: 80%;
+    border: 1px solid #ffffff29;
+    border-radius: 5px;
+    position: relative;
+    margin: 12px 0;
+    height: 36px;
+    line-height: 35px;
+}
+.my_header .my_header_table ul li:last-child {
+	opacity: .4;
+}
+.my_header .my_header_table ul li::before {
+	content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(249 249 249 / 89%) 50%, rgba(255,255,255,0) 100%);
+}
+.my_header .my_header_table ul li::after {
+	content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(249 249 249 / 89%) 50%, rgba(255,255,255,0) 100%);
+}
+.my_header .my_header_table_inner {
+    display: grid;
+    grid-template-columns: 20% 40% 10% 20% 10%;
+    text-align: center;
+    align-items: center;
+}
+.my_header .my_header_table_inner .my_header_table_games img {
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.my_header .my_header_table_inner .my_header_table_games img:hover {
+	box-shadow: 0 0 30px 0 #ffffff61;
+}
+.my_header .my_header_table_inner .my_header_table_gamers {
+    display: flex;
+    justify-content: center;
+}
+.my_header .my_header_table_inner .my_header_table_gamers p {
+	width: 50%;
+	margin: 0;
+}
+.my_header .my_header_table_inner .my_header_table_gamers span {
+    font-family: 'Molot';
+    text-shadow: 0px 0px 10px #87daff;
+}
+.my_header .my_header_table_winner {
+    text-align: right;
+    font-size: 145%;
+    font-family: 'Molot';
+    padding: 0 20px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px #05a2d7;
+    position: relative;
+}
+.my_header .my_header_table_winner::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 50%;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, #0486ba 50%, rgba(255,255,255,0) 100%);
+    box-shadow: 0 2px 6px 0 #0580b4;
+}
+.my_header .my_header_table_winner::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 50%;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, #0486ba 50%, rgba(255,255,255,0) 100%);
+    box-shadow: 0 2px 6px 0 #0580b4;
+}
+.my_header .my_header_table_heads {
+    display: grid;
+    grid-template-columns: 20% 40% 10% 20% 10%;
+    color: #fff;
+    text-align: center;
+    height: 20px;
+    font-family: 'Roboto700';
+    font-size: 80%;
+}
+.my_header .my_header_table_heads div:first-of-type {
+	text-align: left;
+	padding-left: 15px;
+}
+.my_header ._18_plus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 35px 25px;
+    color: #fff;
+    font-family: 'Roboto300';
+    font-size: 90%;
+}
+.my_header ._18_plus span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    line-height: 34px;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 90%;
+}
+/*Features*/
+.my_features {
+    background-image: url(../img/popular-game-section.png);
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: 50% 6vw;
+    padding: 0 0 23% 0;
+    background-color: #01020e;
+    margin-top: -1px;
+}
+.my_features .container-fluid {
+	padding: 0 35px;
+}
+.my_features .my_features_card {
+	position: relative;
+	height: 175px;
+	overflow: hidden;
+	border-radius: 3px;
+}
+.my_features .my_features_card img {
+    object-fit: cover;
+    height: 175px;
+    position: relative;
+    transform: scale(1.1);
+}
+.my_features .my_features_card.one {
+	height: 360px;
+	overflow: hidden;
+}
+.my_features .my_features_card.one img {
+    object-fit: cover;
+    height: 360px;
+    position: relative;
+    transform: scale(1.1);
+}
+.my_features .my_features_card_text {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.my_features .my_features_card_text h4,
+.my_features .my_features_card_text h2 {
+	font-family: 'OhNow';
+}
+.my_features .my_features_card_text h3 {
+	font-family: 'Molot';
+}
+.my_features .my_features_card.one .my_features_card_text h3 {
+    font-size: 400%;
+    line-height: 0.9;
+    margin: 0;
+}
+.my_features .my_features_card.one .my_features_card_text h3 span {
+    display: block;
+    font-size: 190%;
+}
+.my_features .my_features_card.one .my_features_card_text h2 {
+    margin: 0;
+    font-size: 700%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%) rotate( 
+-5deg
+ );
+    text-shadow: 0 0 35px #000;
+}
+.my_features .my_features_card.one .my_features_card_text {
+	padding-top: 60px;
+}
+.my_features .my_features_card.two .my_features_card_text {
+	right: 10px;
+}
+.my_features .my_features_card.two .my_features_card_text h3 {
+	font-size: 200%;
+}
+.my_features .my_features_card.two .my_features_card_text h2 {
+    margin: 0;
+    font-size: 350%;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%) rotate( 
+-5deg
+ );
+    text-shadow: 0 0 35px #000;
+}
+.my_features .my_features_card.two .my_features_card_text {
+	padding-top: 40px;
+}
+.my_features .my_features_card.three .my_features_card_text {
+	width: 100%;
+	right: 0;
+	padding-top: 30px;
+}
+.my_features .my_features_card.three .my_features_card_text h3 {
+	font-size: 260%;
+}
+.my_features .my_features_card.three .my_features_card_text h2 {
+    margin: 0;
+    font-size: 350%;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%) rotate( 
+-5deg
+ );
+    text-shadow: 0 0 35px #000;
+}
+.my_features .my_features_card.four .my_features_card_text h2 {
+    margin: 0;
+    font-size: 500%;
+    transform: rotate(
+-5deg
+);
+    text-shadow: 0 0 35px #000;
+    line-height: .7;
+}
+.my_features .my_features_card.four .my_features_card_text h4 {
+    margin: 0;
+    font-size: 400%;
+    transform: rotate(
+-5deg
+);
+    text-shadow: 0 0 35px #000;
+    line-height: .7;
+    margin-left: 90px;
+}
+.my_features .my_features_card.four .my_features_card_text {
+	right: 16%;
+	top: 45%;
+}
+.my_features .row {
+	margin: 0;
+}
+.my_features .col-lg-6, 
+.my_features .col-12 
+{
+	padding: 0;
+}
+.my_features .col-12,
+.my_features .col-lg-6 .col-lg-6 {
+	padding-left: 10px;
+}
+.my_features .col-12 {
+	margin-top: 10px;
+}
+/*Gardient Border*/
+.top_border {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 57%;
+    height: 2px;
+    background-image: linear-gradient( 90deg, rgb(249 249 249 / 45%) 50%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+    border-radius: 3px;
+}
+.bottom_border {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 57%;
+    height: 2px;
+    background-image: linear-gradient( -90deg, rgb(249 249 249 / 45%) 50%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+    border-radius: 3px;
+}
+.left_border {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 57%;
+    background-image: linear-gradient( 180deg, rgb(249 249 249 / 45%) 50%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+    border-radius: 3px;
+}
+.righ_border {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 57%;
+    background-image: linear-gradient( 180deg, rgb(249 249 249 / 45%) 50%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+    border-radius: 3px;
+    transform: rotate(180deg);
+}
+/*Footer*/
+.my_footer {
+	background: #060918;
+}
+.my_footer_top {
+	padding: 5% 0;
+	position: relative;
+}
+.my_footer_top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+}
+.my_footer_top::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+}
+.my_footer .container-fluid {
+	padding: 0 7%;
+}
+.my_footer .my_footer_intro div img {
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 30px;
+}
+.my_footer .my_footer_intro .text {
+    font-family: 'Roboto300';
+    color: #fff;
+    font-size: 90%;
+    width: 75%;
+}
+.my_footer_links {
+	padding: 0;
+	list-style: none;
+	float: left;
+	width: 25%;
+}
+.my_footer_links li h2 {
+    color: #fff;
+    font-family: 'Roboto400';
+    font-size: 95%;
+    letter-spacing: 1px;
+    margin: 0 0 40px;
+}
+.my_footer_links li a {
+    color: #ffffffbd;
+    font-family: 'Roboto400';
+    font-size: 90%;
+    letter-spacing: 1px;
+    margin: 0 0 25px;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+   	transition: all .5s ease;
+   	text-decoration: none;
+}
+.my_footer_links li a:hover {
+	border-color: #02bff7;
+}
+.my_footer_btm {
+	padding: 25px 40px;
+    display: inline-block;
+    width: 100%;
+}
+.my_footer_btm p {
+    margin: 0;
+    line-height: 34px;
+    font-family: 'Roboto400';
+    color: #ffffff47;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 90%;
+    float: left;
+}
+.my_footer_btm img {
+	float: right;
+    width: 130px;
+}
+/*Popular Games*/
+.my_pop_games {
+    background: #03081d;
+}
+.my_pop_games .container-fluid {
+    padding: 0 35px;
+}
+.my_pop_games .my_pop_games_head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+    top: -60px;
+}
+.my_pop_games .my_pop_games_head h2 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 260%;
+    margin: 0;
+}
+.my_pop_games .my_pop_games_head a {
+    margin-left: auto;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto300';
+    letter-spacing: 1px;
+    font-size: 90%;
+    border-bottom: 1px solid #02bff7;
+}
+.my_pop_games .my_pop_games_head a span {
+    color: #02bff7;
+}
+.my_pop_games .row {
+    margin-top: -50px;
+    padding: 0 10px;
+}
+.my_pop_games .my_pop_games_card {
+    position: relative;
+    border: 1px solid #cccccc1a;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.my_pop_games .my_pop_games_card_text {
+    padding: 25px;
+}
+.my_pop_games .my_pop_games_card_text h2 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 180%;
+    margin: 0 0 10px;
+}
+.my_pop_games .my_pop_games_card_text p {
+    margin: 0;
+    line-height: 1.3;
+    color: #fff;
+    font-size: 80%;
+}
+.my_pop_games .my_pop_games_card_thumb {
+    position: relative;
+}
+.my_pop_games .my_pop_games_card_thumb .people {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.my_pop_games .my_pop_games_card_thumb .people span {
+    color: #fff;
+    font-family: 'Roboto400';
+    font-size: 80%;
+    margin-left: 10px;
+}
+.my_pop_games .my_pop_games_card_thumb ul {
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}
+.my_pop_games .my_pop_games_card_thumb ul li {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.my_pop_games .my_pop_games_card_thumb ul li:nth-child(1) {
+    background: #e81830;
+}
+.my_pop_games .my_pop_games_card_thumb ul li:nth-child(1):hover {
+    width: 170px;
+}
+.my_pop_games .my_pop_games_card_thumb ul li:nth-child(2) {
+    background: #3ab5de;
+}
+.my_pop_games .my_pop_games_card_thumb ul li:nth-child(2):hover {
+    width: 250px;
+}
+.my_pop_games .my_pop_games_card_thumb ul li:nth-child(3) {
+    background: #052228;
+    border-color: #fff;
+}
+.my_pop_games .my_pop_games_card_thumb ul li:nth-child(3):hover {
+    width: 230px;
+}
+.my_pop_games .my_pop_games_card_thumb ul li img {
+    width: 30px;
+    margin: 0 auto;
+}
+.my_pop_games .my_pop_games_card_thumb ul li:hover span {
+    width: auto;
+    opacity: 1;
+    padding-left: 15px;
+    transition-delay: .5s;
+}
+.my_pop_games .my_pop_games_card_thumb ul li span {
+    width: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto400';
+    letter-spacing: 1px;
+    font-size: 80%;
+    transition: opacity .3s ease;
+    opacity: 0;
+    white-space: nowrap;
+}
+.my_pop_games .col-xl-3 {
+    padding: 0 5px;
+}
+/*Tournament*/
+.my_tour {
+    position: relative;
+    background-image: url('../img/tournament-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 54%;
+    background-color: #03081d;
+    padding-bottom: 100px;
+}
+.my_tour .my_tour_logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+}
+.my_tour .container-fluid {
+    padding: 0 35px;
+}
+.my_tour a {
+    margin-left: auto;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto300';
+    letter-spacing: 1px;
+    font-size: 90%;
+    border-bottom: 1px solid #02bff7;
+    text-align: right;
+    width: 70px;
+    display: inline-block;
+    margin-top: 60px;
+}
+.my_tour a span {
+    color: #02bff7;
+}
+.my_tour h1 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 260%;
+    margin: 30px 0 70px;
+    text-align: center;
+}
+.my_tour .row {
+    padding: 0 15%;
+}
+.my_tour .my_tour_card {
+}
+.my_tour .my_tour_card .my_tour_card_thumb {
+    position: relative;
+    background: #000000b8;
+    border: 1px solid #ffffff24;
+    width: 115px;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.my_tour .my_tour_card .my_tour_card_thumb img {
+    width: auto;
+    height: 70px;
+}
+.my_tour .my_tour_card h2 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 155%;
+    margin: 0;
+    text-align: center;
+}
+.my_tour .my_tour_card p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto400';
+    font-size: 80%;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+}
+.my_tour .btn_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+.my_tour .btn-default {
+    background: #389ccd;
+    width: auto;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto400';
+    letter-spacing: 1px;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    transition: all .5s ease;
+    margin: 0;
+    border: 1px solid transparent;
+    padding: 0 20px;
+}
+.my_tour .btn-default.btn-inverse {
+    margin-left: 30px;
+    background: transparent;
+    border-color: #fff;
+    padding: 0 40px;
+}
+/*Dauel*/
+.my_duel {
+    position: relative;
+    background-image: url('../img/home-bg4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 54%;
+    background-color: #03081d;
+    padding: 5% 0 8%;
+}
+.my_duel_logo {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    width: 80px;
+}
+.my_duel h1 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 260%;
+    margin: 0 0 35px;
+    text-align: center;
+}
+.my_duel .my_duel_card {
+    text-align: center;
+    color: #fff;
+    padding: 80px 45px;
+    position: relative;
+    height: 100%;
+}
+.my_duel .my_duel_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: revert;
+    width: 1px;
+    height: 100%;
+    background-image: linear-gradient( 
+157deg
+ , rgba(255,255,255,0) 0%, rgb(249 249 249 / 89%) 50%, rgba(255,255,255,0) 100%);
+}
+.my_duel .my_duel_card.last::before {
+    display: none;
+}
+.my_duel .my_duel_card h2 {
+    color: #fff;
+    font-family: 'Molot';
+    font-size: 180%;
+    margin: 0;
+    text-align: center;
+}
+.my_duel .my_duel_card p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto400';
+    font-size: 90%;
+    letter-spacing: 1px;
+    margin: 30px 0;
+}
+.my_duel .my_duel_card ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 40px; 
+    margin: 0;
+}
+.my_duel .my_duel_card a:not(ul li a) {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto300';
+    letter-spacing: 1px;
+    font-size: 90%;
+    border-bottom: 1px solid #02bff7;
+    float: right;
+}
+.my_duel .my_duel_card a:not(ul li a) span {
+    color: #02bff7;
+}
+.my_duel .my_duel_card.last a:not(ul li a) {
+    float: none;
+}
+/*Media Query*/
+@media(max-width: 1500px) {
+	/*Navbar*/
+	.my_nav {
+		font-size: 80%;
+	}
+	.my_nav .navbar-expand-xl .navbar-nav .nav-item {
+    	margin-right: 25px;
+	}
+	.my_nav .navbar-brand {
+    	width: 190px;
+	}
+	/*Header*/
+	.my_header_content {
+		font-size: 80%;
+	}
+	/*Features*/
+	.my_features .my_features_card.four .my_features_card_text {
+    	right: 12%;
+    	width: 60%;
+	}
+    /*Tournament*/
+    .my_duel .my_duel_card p {
+        font-size: 80%;
+    }
+}
+@media(max-width: 1199px) {
+	/*Navbar*/
+	.my_nav nav {
+    	padding: 30px 35px 0;
+	}
+	.navbar-toggler {
+		padding: 0;
+		outline: none !important;
+		background-image: url(../img/menu-icon.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+	.navbar-collapse {
+		padding: 25px 20px;
+	    position: absolute;
+	    top: 100%;
+	    right: 35px;
+	    width: 100%;
+	    max-width: 290px;
+	    border-radius: 3px;
+	    background: #143458b5;
+	    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+	    backdrop-filter: blur( 4px );
+	    -webkit-backdrop-filter: blur( 4px );
+	    border: 1px solid rgba( 255, 255, 255, 0.18 );
+	    display: block;
+	    transform-origin: 100% 0;
+	    transform: scale(0);
+	    transition: all .5s ease;
+	}
+	.navbar-collapse.show,
+	.navbar-collapse.collapsing {
+		height: auto !important;
+		transform: scale(1);
+	}
+	.my_nav .navbar-expand-xl .navbar-nav .nav-link {
+		display: inline-block;
+	}
+	.my_nav .navbar-expand-xl .navbar-nav .nav-item {
+    	margin: 8px 0;
+    	line-height: 1;
+	}
+	.my_nav .navbar-expand-xl .navbar-nav .nav-item:first-child {
+		margin-top: 0;
+	}
+	.my_nav .my_nav_right {
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+	.my_nav_wallet {
+		width: 100%;
+	}
+	.my_nav .my_nav_right .my_nav_wallet div {
+		margin: 15px 0;
+	}
+	.my_nav .my_nav_right .my_nav_gamers button {
+		width: 150px;
+		text-align: left;
+	}
+	/*Header*/
+	.my_header .my_header_table_heads,
+	.my_header .my_header_table ul li,
+	.my_header_content {
+    	font-size: 65%;
+	}
+	.my_header .my_header_table_inner .my_header_table_games img {
+    	width: 15px;
+    	margin-left: 5px;
+	}
+	.my_header .my_header_table ul li:first-child {
+		margin-top: 0;
+	}
+	/*Features*/
+	.my_features .my_features_card.one {
+    	height: 235px;
+	}
+	.my_features .my_features_card.one img {
+    	height: 235px;
+	}
+	.my_features .my_features_card.one .my_features_card_text {
+    	padding-top: 50px;
+    	font-size: 70%;
+	}
+	.my_features .my_features_card img,
+	.my_features .my_features_card {
+    	height: 112px;
+	}
+	.my_features .my_features_card.two {
+		font-size: 70%;
+	}
+	.my_features .my_features_card.two .my_features_card_text h2 {
+		top: 25px;
+	}
+	.my_features .my_features_card.three {
+		font-size: 70%;
+	}
+	.my_features .my_features_card.three .my_features_card_text h2 {
+		top: 15px;
+	}
+	.my_features .my_features_card.four .my_features_card_text {
+		font-size: 65%;
+	}
+    /*Footer*/
+    .my_footer .my_footer_intro .text {
+        font-size: 80%;
+        width: 90%;
+    }
+    .my_footer_links li a {
+        font-size: 70%;
+        margin: 0 0 15px;
+    }
+    .my_footer_links li h2 {
+        font-size: 80%;
+        margin: 0 0 30px;
+    }
+    /*Popular Games*/
+    .my_pop_games .col-xl-3 {
+        padding: 5px 5px;
+    }
+    .my_pop_games .my_pop_games_head h2 {
+        font-size: 200%;
+    }
+    /*Tournament*/
+    .my_tour .row {
+        padding: 0 10%;
+    }
+    /*Duel*/
+    .my_duel .my_duel_card {
+        padding: 80px 30px;
+    }
+    .my_duel .my_duel_card p {
+        font-size: 70%;
+    }
+    .my_duel_logo {
+        width: 55px;
+    }
+    .my_duel .my_duel_card ul {
+        grid-column-gap: 25px;
+        transform: scale(0.7);
+    }
+}
+@media(max-width: 991px) {
+	/*Header*/
+	.my_header_content {
+		text-align: center;
+		font-size: 85%;
+	}
+	.my_header .btn_group {
+    	margin: 30px 0 10%;
+    	display: flex;
+    	justify-content: center;
+	}
+	.my_header .container-fluid {
+    	padding: 0 12%;
+	}
+	.my_header {
+    	padding: 25% 0 15%;
+	}
+	.my_header .my_header_table {
+		padding-left: 0;
+	}
+	/*Features*/
+	.my_features .my_features_card.one {
+    	margin-bottom: 10px;
+	}
+	.my_features .my_features_card img, 
+	.my_features .my_features_card {
+    	height: 160px;
+	}
+	.my_features .my_features_card.three .my_features_card_text h2 {
+    	top: 40px;
+	}
+	.my_features .my_features_card.two .my_features_card_text h3 {
+    	font-size: 260%;
+	}
+	.my_features .my_features_card.two .my_features_card_text h2 {
+    	top: 45px;
+	}
+	.my_features .my_features_card.four .my_features_card_text {
+    	font-size: 85%;
+    	top: 50%;
+	}
+	.my_features .col-12, .my_features .col-lg-6 .col-lg-6 {
+    	padding-left: 0;
+	}
+    /*Footer*/
+    .my_footer_top {
+        padding: 10% 0;
+    }
+    .my_footer .my_footer_intro .text {
+        margin-bottom: 40px;
+    }
+    .my_footer .container-fluid {
+        padding: 0 5%;
+    } 
+    .my_footer_links li a {
+        margin: 0;
+    }
+    /*Duel*/
+    .my_duel .my_duel_card p {
+        font-size: 90%;
+    } 
+    .my_duel .my_duel_card p {
+        font-size: 90%;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .my_duel .my_duel_card::before {
+        width: 100%;
+        height: 1px;
+        top: auto;
+        bottom: 0;
+    }
+    .my_duel .my_duel_card a:not(ul li a) {
+        float: none;
+    }
+}
+@media (max-width: 767px) {
+	/*Header*/
+	.my_header .container-fluid {
+    	padding: 0 20px;
+	}
+	.my_header_content {
+		font-size: 70%;
+	}
+    /*Footer*/
+    .my_footer .my_footer_intro .text {
+        width: 100%;
+    }
+    .my_footer_links li h2 {
+        margin: 0 0 10px;
+    }
+    .my_footer_links {
+        width: 50%;
+        margin: 0 0 25px;
+    }
+    /*Duel*/
+    .my_duel {
+        padding: 10% 0 15%;
+    }
+    .my_duel .my_duel_card p {
+        width: 90%;
+    }
+    .my_duel .my_duel_card {
+        padding: 45px 30px;
+    }
+    .my_duel h1 {
+        margin: 0;
+    }
+}
+@media(max-width: 480px) {
+	/*Navbar*/
+	.my_nav nav {
+    	padding: 17px 25px 0;
+	}
+	.my_nav .navbar-brand {
+	    width: 145px;
+	    margin: 0;
+	    padding: 0;
+	    position: relative;
+	    top: -4px;
+	}
+	.navbar-toggler {
+    	background-size: 78%;
+    	background-position: 100% 50%;
+	}
+	.navbar-collapse {
+	    right: 25px;
+	    max-width: 70%;
+	}
+	/*Header*/
+	.my_header_content {
+    	font-size: 2.5vw;
+	}
+	.my_header .my_header_content h2 {
+    	font-size: 300%;
+	}
+	.my_header .my_header_content h3 br {
+		display: none;
+	}
+	.my_header .my_header_content h3 {
+    	font-size: 200%;
+	}
+	.my_header .btn_group .btn-default.btn-inverse {
+		margin-left: 5px;
+	}
+	.my_header .btn_group {
+    	margin: 20px 0 40px;
+    	transform: scale(0.9);
+	}
+	.my_header .my_header_table_heads, 
+	.my_header .my_header_table ul li
+	{
+    	font-size: 50%;
+	}
+	.my_header {
+    	padding: 25% 0 25%;
+	}
+	.my_header ._18_plus {
+    	font-size: 70%;
+	    padding: 0;
+	    text-align: center;
+	    bottom: 15px;
+	}
+	.my_header ._18_plus span {
+	    width: 25px;
+	    height: 25px;
+	    line-height: 24px;
+	}
+	.my_header .my_header_table_heads,
+	.my_header .my_header_table_inner {
+	    grid-template-columns: 33% 33% 33% 33% 33%;
+	    grid-auto-flow: column;
+	    grid-gap: 12px;
+	    overflow: auto;
+	}
+	.my_header_table_games {
+	    text-align: left;
+    	padding-left: 15px;
+	}
+	/*Features*/
+	.my_features .container-fluid {
+    	padding: 0 20px;
+	}
+	.my_features .col-sm-6 {
+		margin-top: 10px;
+	}
+	.my_features .my_features_card.one {
+    	margin-bottom: 0;
+	}
+	.my_features .my_features_card.one img,
+	.my_features .my_features_card.one {
+    	height: 155px;
+	}
+	.my_features .my_features_card.one .my_features_card_text {
+    	padding-top: 40px;
+    	font-size: 40%;
+	}
+	.my_features .my_features_card.four img, 
+	.my_features .my_features_card.four {
+    	height: 100px;
+	}
+	.my_features .my_features_card.four .my_features_card_text {
+    	font-size: 42%;
+    	top: 48%;
+	}
+	.my_features .my_features_card.four .my_features_card_text h4 {
+		margin-left: 43px;
+	}
+    /*Footer*/
+    .my_footer_btm p {
+        font-size: 80%;
+        float: none;
+        text-align: center;
+    }
+    .my_footer_btm img {
+        float: none;
+        margin-top: 10px;
+    }
+    .my_footer_btm {
+        text-align: center;
+    }
+    /*Popular Games*/
+    .my_pop_games .container-fluid {
+        padding: 0 20px;
+    }
+    .my_pop_games .my_pop_games_head h2 {
+        font-size: 130%;
+    }
+    .my_pop_games .my_pop_games_head a {
+        font-size: 80%;
+    }
+    /*Tournament*/
+    .my_tour .row {
+        padding: 0;
+    }
+    .my_tour h1 {
+        font-size: 180%;
+        margin: 30px 0 45px;
+    }
+    .my_tour .my_tour_card h2 {
+        font-size: 130%;
+    }   
+    .my_tour .my_tour_card p {
+        font-size: 60%;
+    }
+    .my_tour .col-6 {
+        padding: 15px 0;
+    }
+    .my_tour .btn_group {
+        margin-top: 30px;
+        transform: scale(0.8);
+    }   
+    .my_tour {
+        background-position: 62% 54%;
+    }
+    .my_tour .my_tour_card .my_tour_card_thumb img {
+        height: 50px;
+    }
+    .my_tour .my_tour_card .my_tour_card_thumb {
+        width: 100px;
+        height: 100px;
+    }
+    /*Duel*/
+    .my_duel .my_duel_card p {
+        width: 100%;
+        font-size: 80%;
+    }
+    .my_duel h1 {
+        font-size: 180%;
+    }
+    .my_duel .my_duel_card h2 {
+        font-size: 130%;
+    }   
+}
